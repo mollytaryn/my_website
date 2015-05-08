@@ -1,0 +1,18 @@
+{
+  "name": "my_website",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mollytaryn/my_website",
+  "authors": [
+    "mollytaryn <mollytaryn@gmail.com>"
+  ],
+  "description": "My professional portfolio website",
+  "main": "public/index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

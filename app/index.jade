@@ -10,58 +10,91 @@ html
     link(href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Bitter:400,700,400italic' rel='stylesheet' type='text/css')
   body
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    section
-      .bio
-        .headshot
-          img(src="assets/images/forest_headshot.jpg")
-        .header
-          h1.header MOLLY MORGAN BLACK
-          h4.header Junior Software Developer | Product Manager
-        .languages.header
-          h2.header LANGUAGES
-          ul
-            li HTML5
-            li CSS3
-            li JavaScript
-            li AngularJS
-            li Ruby
-            li Rails
-            li French
-        .skills.header
-          h2.header SKILLS
-          ul
-            li Jade
-            li SASS
-            li Bootstrap
-            li jQuery
-            li Grunt
-            li Gulp
-            li Bower
-            li JSON
-            li Firebase
-            li S3
-            li Jekyll
-            li SQL
-            li Mocha
-            li Chai
-            li TDD
-            li Sendgrid
-            li Twilio
-            li Podio
-            li Asana
-            li Basecamp
-            li Google Spreadsheets
-            li CS6
-            li Reputation Management
-            li SEO
-            li Google Search Optimization
-            li Google Local Optimization
-            li Auto-Suggest Optimization
-        .summary.header
-          h2.header BIO
-          p My professional story is a long one, but I'll condense: Neuroscience and creative writing double major at Columbia University. French speaker. Former neuropsych researcher, academic tutor, book editor, and book designer. Still love all these past lives. Brief toe dip into the world of advertising. Too cold. Grew up in Portland, OR, raised by NYC, and lived in South Africa and France in the in betweens. Found my passion as a product manager at a tech start-up right outside of Nashville, Tennessee and realized I wanted to become a software developer. Go figure.
-        .social
-          img.icon(src="assets/social_icons/github_icon.svg")
-          img.icon(src="assets/social_icons/linkedin_icon.png")
-          img.icon(src="assets/social_icons/twitter-icon.png")
-      .portfolio
+    .header.white
+      h1.white MOLLY MORGAN BLACK
+      h4.white Software Developer // Product Manager
+    .navbar.grey
+      a.white(href="#about") About
+      a.white(href="#skills") Skills
+      a.white(href="#portfolio") Portfolio
+      a.white(href="#resume") Résumé
+      a.white(href="#connect") Connect
+    .container
+      #about
+        .aboutLeft
+          h2
+            .white About
+          .navbar
+            a.white(href="#skills") Skills
+            a.white(href="#portfolio") Portfolio
+            a.white(href="#resume") Résumé
+            a.white(href="#connect") Connect
+        .aboutRight
+          .bodyText
+            p About myself I’ll say this:
+            p I was born and raised in Portland, OR, became an adult in New York City, have spent long stretches in South Africa and France, and currently reside on a farm outside of Nashville, Tennessee.
+            p I’ve worked in neurobehavioral research labs studying postpartum depression using FMRI technology, as a academic tutor for high-achieving students, as an English teacher in elementary schools in France, in book publishing as an editor, production manager, and designer, in advertising as a project manager and at a tech start-up as a product manager, only to find myself back in the classroom studying to become a software developer.
+            p What I've discovered in all of these lives, is that I love to learn, and that I love to build. And it are these passions that brought me to software development – a discipline that is the perfect marriage of my analytical and creative brain.
+            p In software development, I’ve found the opportunity to marry my creative brain with my analytical brain. This has been a dream I didn’t know I was chasing, am I so grateful to have stumbled upon.
+            p As a developer my interests lie in creating software that addresses the changing economy, including how people earn money, take care of themselves and their health, and live lives of their own choosing. I believe software should be as intuitive as it is functional, accessible to everyone, and create value for the user.
+    .button
+      button.white.pewter.arrow(href="#skills") ▽
+    .container
+      #skills
+        .skillsLeft
+          h2 Skills
+          .navbar
+            a.greyFont(href="#about") About
+            a.greyFont(href="#portfolio") Portfolio
+            a.greyFont(href="#resume") Résumé
+            a.greyFont(href="#connect") Connect
+        .skillsRight
+          p.white HTML5, CSS3, JavaScript, jQuery, #[span.largeFont.angular AngularJS], Ruby, #[span.largeFont.ruby Rails], Jade, SASS, #[span.largeFont.bootstrap Bootstrap], Foundation, Gulp, #[span.largeFont.grunt Grunt], Bower, JSON, Firebase, #[span.largeFont.s3 S3], Jekyll, SQL, TDD, Mocha, Chai, #[span.largeFont.twilio Twilio], Sendgrid, Podio, #[span.largeFont.asana Asana], Basecamp, #[span.largeFont.cs6 CS6], Reputation Management, SEO, #[span.largeFont.google Google Search Optimization], Google Local Optimization, Auto-Suggest Optimization
+    .button
+      button(type="button").white.grey.arrow ▽
+    .container
+      #portfolio
+        .portfolioLeft
+          h2
+            .white Portfolio
+          .navbar
+            a.white(href="#about") About
+            a.white(href="#skills") Skills
+            a.white(href="#resume") Résumé
+            a.white(href="#connect") Connect
+        .portfolioRight
+          .row
+            .portfolio_img
+              a(href="https://habitracker.firebaseapp.com")
+                img(src="assets/images/habitracker2.png")
+            .portfolio_description
+              h4 habitrackr
+              p This habit-tracking app is designed to help you lessen bad habits and establish good ones by giving you real data about your behaviors.
+              p #[span.bold Stack:] HTML5, CSS3, AngularJS, Firebase
+              a(href="https://habitracker.firebaseapp.com") habitracker.firebaseapp.com
+              br
+              a(href="https://github.com/mollytaryn/habitsApp") github.com/mollytaryn/habitsApp
+          .row
+    .button
+      button(type="button").white.tan.arrow ▽
+    .container
+      #resume
+        .resumeLeft
+          h2 Résumé
+          .navbar
+            a.greyFont(href="#about") About
+            a.greyFont(href="#skills") Skills
+            a.greyFont(href="#portfolio") Portfolio
+            a.greyFont(href="#connect") Connect
+        .resumeRight
+          img.resume(src="assets/images/resume.jpg")
+    .button
+      button(type="button").white.pewter.arrow ▽
+
+    #connect
+      a(href="https://github.com/mollytaryn")
+        img.icon(src="assets/social_icons/github_icon.png")
+      a(href="https://www.linkedin.com/pub/molly-morgan-black/2a/183/56b")
+        img.icon(src="assets/social_icons/linkedin_icon.png")
+      a(href="https://twitter.com/mollymoblack")
+        img.icon(src="assets/social_icons/twitter_icon.png")

@@ -2,135 +2,290 @@
 @import "../../bower_components/neat/app/assets/stylesheets/_neat.scss";
 
 body {
-  background-color: #E0E0E0;
+  margin: 0;
 }
 
-section {
-  @include outer-container;
-  .bio { @include span-columns(5);}
-  .porfolio {@include span-columns(7);}
+.white {
+  color: white;
 }
 
-.bio {
-  background-color: #E0E0E0;
-  border-right: 6px solid #E0E0E0;
-  height: 1000px;
+.greyFont {
+  color: #45484B;
 }
 
-.portfolio {
-  background-color: white;
-  height: 1000px;
+.pewter {
+  background-color: #696758;
+}
+
+.grey {
+  background-color: #45484B;
+}
+
+.tan {
+  background-color: #BCBDAC;
 }
 
 .header {
   font-family: Lato;
   text-align: center;
-  margin: 0px;
-  h1 {
-    padding: 10px 0 5px 0;
-    font-weight: 500;
-    font-size: 30px;
-    color: white;
-    background-color: #28AE7B;
-  }
+  background: url("../assets/images/background_image.jpg") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 92%;
 
-  h2 {
-    padding: 10px 0 10px 0;
-    color: white;
-    font-weight: 500;
-    font-size: 18px;
+  h1 {
+    font-size: 80px;
+    font-weight: 100;
+    margin: 0;
+    padding: 10px 0 5px 0;
   }
 
   h4 {
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 22px;
+    font-weight: 100;
+    letter-spacing: 1px;
     font-style: italic;
-    padding: 0px 0 10px 0;
-    color: white;
-    background-color: #28AE7B;
-    border-bottom: 6px solid #E0E0E0;
+    margin: 10px;
   }
 }
 
-.languages {
-  border-bottom: 6px solid #E0E0E0;
-  background-color: #036564;
-
-  ul {
-    margin-top: 0;
-    padding: 10px;
-    list-style-type: none;
-    font-family: Lato;
-    font-size: 17px;
-    font-weight: 300;
-    color: white;
-    text-align: center;
-
-    li {
-      display: inline;
-      padding: 1px 5px;
-      text-align: center;
-      border-radius: 5px;
-    }
-
-    li:hover {
-      background-color: white;
-      color: #036564;
-    }
-  }
-}
-
-.skills {
-  border-bottom: 6px solid #E0E0E0;
-  background-color: #0B486B;
-
-  ul {
-    margin-top: 0;
-    padding: 10px;
-    list-style-type: none;
-    font-family: Lato;
-    font-size: 17px;
-    font-weight: 300;
-    color: white;
-    text-align: center;
-
-    li {
-      display: inline;
-      padding: 1px 5px;
-      text-align: center;
-      border-radius: 5px;
-    }
-  }
-}
-
-.headshot {
-  width: 100%;
-  overflow: hidden;
-  height: 160px;
-
-  img {
-    margin-top: -145px;
-    margin-right: -30px;
-  }
-}
-
-.summary {
-  background-color: #53777A;
-  color: white;
-  border-bottom: 6px solid #E0E0E0;
-  p {
-    font-weight: 300;
-    margin-top: 0;
-    padding: 10px 30px;
-    text-align: left;
-  }
-}
-
-.social {
+.navbar {
+  height: 60px;
   text-align: center;
-  .icon {
-    display: inline;
-    height: 50px;
-    padding: 10px;
+  padding: 20px 0 0 0;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 400;
+
+  a {
+    padding: 0 30px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+}
+
+.container {
+  @include outer-container;
+  max-width: 100%;
+  height: 100%;
+
+  .aboutLeft {
+    @include span-columns(6 of 12, block-collapse);
+    height: 100%;
+    background-color: #696758;
+  }
+
+  .aboutRight {
+    @include span-columns(6 of 12, block-collapse);
+    @include reset-display;
+    height: 100%;
+    color: #45484B;
+  }
+
+  .skillsLeft {
+    @include span-columns(6 of 12, block-collapse);
+    height: 100%;
+    color: #45484B;
+  }
+
+  .skillsRight {
+    @include span-columns(6 of 12, block-collapse);
+    @include reset-display;
+    background-color: #45484B;
+    height: 100%;
+  }
+
+  .portfolioLeft {
+    @include span-columns(6 of 12, block-collapse);
+    height: 100%;
+    background-color: #BCBDAC;
+  }
+
+  .portfolioRight {
+    @include span-columns(6 of 12, block-collapse);
+    @include reset-display;
+    height: 100%;
+  }
+
+  .resumeLeft {
+    @include span-columns(6 of 12, block-collapse);
+    height: 100%;
+    color: #45484B;
+  }
+
+  .resumeRight {
+    @include span-columns(6 of 12, block-collapse);
+    @include reset-display;
+    height: 100%;
+    text-align: center;
+    background-color: #696758;
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20%;
+  font-family: Lato;
+  font-weight: 100;
+  font-size: 80px;
+  margin-bottom: 50%;
+}
+
+.button {
+  @include span-columns(12 of 12, block-collapse);
+  text-align: center;
+  margin-top: -20%;
+}
+
+button.arrow {
+  border: 2px solid white;
+  border-radius: 50px;
+  width: 90px;
+  height: 90px;
+  font-family: Lato;
+  font-size: 50px;
+  font-weight: 100;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.bodyText {
+  padding-top: 30px;
+  p {
+      font-family: Lato;
+      font-size: 17px;
+      font-weight: 400;
+      margin-bottom: 5px;
+      padding: 5px 80px;
+      text-align: left;
+  }
+}
+
+#skills {
+  p {
+    margin-top: 25%;
+    font-family: Lato;
+    font-size: 18px;
+    padding: 5px 80px;
+    line-height: 40px;
+    word-spacing: 5px;
+  }
+
+  .largeFont {
+    font-size: 40px;
+  }
+
+  .angular {
+    color: #CA3D32;
+  }
+
+  .ruby {
+    color: #C6342A;
+  }
+
+  .bootstrap {
+    color: #574B81;
+  }
+
+  .grunt {
+    color: #f1AB3A;
+  }
+
+  .s3 {
+    color: #F6BC37;
+  }
+
+  .twilio {
+    color: #E93F33;
+  }
+
+  .cs6 {
+    color: #D7D7D7;
+  }
+
+  .google {
+    color: #4485FA;
+  }
+
+  .asana {
+    color: #328ACA;
+  }
+
+}
+.row {
+  height: 300px;
+  .portfolio_description {
+    @include span-columns(3 of 6);
+    padding-left: 10px;
+    font-family: Lato;
+    font-size: 17px;
+    font-weight: 400;
+    color: #45484B;
+
+    .bold {
+      font-weight: 600;
+    }
+  }
+
+  .portfolio_img img {
+    @include span-columns(3 of 6);
+    border-radius: 8px;
+    margin: 5px;
+  }
+}
+
+img.resume {
+  width: 85%;
+  margin-top: 5%;
+}
+
+#connect {
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  background-color: #45484B;
+
+  img.icon {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 10px 40px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .container {
+    @include outer-container;
+    width: 100%;
+
+    .aboutLeft {
+      @include span-columns(12 of 12, block-collapse);
+      height: 60px;
+    }
+
+    .aboutRight {
+      @include span-columns(12 of 12, block-collapse);
+    }
+
+    .skillsLeft {
+      @include span-columns(12 of 12, block-collapse);
+      height: 60px;
+    }
+
+    .skillsRight {
+      @include span-columns(12 of 12, block-collapse);
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 0;
+    font-family: Lato;
+    font-weight: 100;
+    font-size: 50px;
   }
 }

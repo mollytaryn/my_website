@@ -68,7 +68,7 @@ body {
 }
 
 .container {
-  @include outer-container;
+  @include outer-container(100%);
   max-width: 100%;
   height: 100%;
 
@@ -80,7 +80,8 @@ body {
 
   .aboutRight {
     @include span-columns(6 of 12, block-collapse);
-    @include reset-display;
+    // @include reset-display;
+    overflow: auto;
     height: 100%;
     color: #45484B;
   }
@@ -93,8 +94,9 @@ body {
 
   .skillsRight {
     @include span-columns(6 of 12, block-collapse);
-    @include reset-display;
+    // @include reset-display;
     background-color: #45484B;
+    overflow: auto;
     height: 100%;
   }
 
@@ -106,7 +108,8 @@ body {
 
   .portfolioRight {
     @include span-columns(6 of 12, block-collapse);
-    @include reset-display;
+    // @include reset-display;
+    overflow: auto;
     height: 100%;
   }
 
@@ -118,7 +121,8 @@ body {
 
   .resumeRight {
     @include span-columns(6 of 12, block-collapse);
-    @include reset-display;
+    // @include reset-display;
+    overflow: auto;
     height: 100%;
     text-align: center;
     background-color: #696758;

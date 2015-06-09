@@ -51,6 +51,11 @@ body {
   }
 }
 
+.section {
+  position: relative;
+  margin-top: 50%
+}
+
 .navbar {
   height: 60px;
   text-align: center;
@@ -67,81 +72,20 @@ body {
   }
 }
 
-.container {
-  @include outer-container(100%);
-  max-width: 100%;
-  height: 100%;
-
-  .aboutLeft {
-    @include span-columns(6 of 12, block-collapse);
-    height: 100%;
-    background-color: #696758;
-  }
-
-  .aboutRight {
-    @include span-columns(6 of 12, block-collapse);
-    // @include reset-display;
-    overflow: auto;
-    height: 100%;
-    color: #45484B;
-  }
-
-  .skillsLeft {
-    @include span-columns(6 of 12, block-collapse);
-    height: 100%;
-    color: #45484B;
-  }
-
-  .skillsRight {
-    @include span-columns(6 of 12, block-collapse);
-    // @include reset-display;
-    background-color: #45484B;
-    overflow: auto;
-    height: 100%;
-  }
-
-  .portfolioLeft {
-    @include span-columns(6 of 12, block-collapse);
-    height: 100%;
-    background-color: #BCBDAC;
-  }
-
-  .portfolioRight {
-    @include span-columns(6 of 12, block-collapse);
-    // @include reset-display;
-    overflow: auto;
-    height: 100%;
-  }
-
-  .resumeLeft {
-    @include span-columns(6 of 12, block-collapse);
-    height: 100%;
-    color: #45484B;
-  }
-
-  .resumeRight {
-    @include span-columns(6 of 12, block-collapse);
-    // @include reset-display;
-    overflow: auto;
-    height: 100%;
-    text-align: center;
-    background-color: #696758;
-  }
-}
-
 h2 {
   text-align: center;
   margin-top: 20%;
   font-family: Lato;
   font-weight: 100;
   font-size: 80px;
-  margin-bottom: 50%;
+  // margin-bottom: 50%;
 }
 
-.button {
-  @include span-columns(12 of 12, block-collapse);
-  text-align: center;
-  margin-top: -20%;
+button {
+  font-weight: 100;
+  font-family: Lato;
+  font-size: 80px;
+  border: none;
 }
 
 button.arrow {
@@ -176,6 +120,7 @@ button.arrow {
     padding: 5px 80px;
     line-height: 40px;
     word-spacing: 5px;
+    color: white;
   }
 
   .largeFont {
@@ -217,12 +162,12 @@ button.arrow {
   .asana {
     color: #328ACA;
   }
-
 }
+
 .row {
+  text-align: center;
   height: 300px;
   .portfolio_description {
-    @include span-columns(3 of 6);
     padding-left: 10px;
     font-family: Lato;
     font-size: 17px;
@@ -235,15 +180,15 @@ button.arrow {
   }
 
   .portfolio_img img {
-    @include span-columns(3 of 6);
     border-radius: 8px;
-    margin: 5px;
+    max-width: 380px;
+    margin: 10px;
   }
 }
 
 img.resume {
   width: 85%;
-  margin-top: 5%;
+  margin-top: 25px;
 }
 
 #connect {
@@ -260,28 +205,79 @@ img.resume {
   }
 }
 
-
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   .container {
-    @include outer-container;
+    margin: 0;
     width: 100%;
 
     .aboutLeft {
-      @include span-columns(12 of 12, block-collapse);
+      margin: none;
       height: 60px;
+      background-color: #696758;
+      color: white;
     }
 
     .aboutRight {
-      @include span-columns(12 of 12, block-collapse);
+      overflow: none;
+      height: auto;
+      // background-color: #696758;
+      // color: white;
     }
 
     .skillsLeft {
-      @include span-columns(12 of 12, block-collapse);
       height: 60px;
+      background-color: #45484B;
+      color: white;
     }
 
     .skillsRight {
-      @include span-columns(12 of 12, block-collapse);
+      // background-color: #45484B;
+      overflow: none;
+      height: auto;
+    }
+
+    .portfolioLeft {
+      height: 60px;
+      background-color: #BCBDAC;
+      color: white;
+    }
+
+    .portfolioRight {
+      background-color: white;
+      overflow: none;
+      height: auto;
+    }
+
+    .resumeLeft {
+      height: 60px;
+      background-color: #696758;
+      color: white;
+    }
+
+    .resumeRight {
+      overflow: none;
+      height: auto;
+      text-align: center;
+      border-top: 1px solid white;
+    }
+  }
+
+  .header {
+    height: 360px;
+  }
+
+  .navbar {
+    a {
+      padding: 0 10px;
+    }
+  }
+
+  .bodyText {
+    border-top: 1px solid white;
+    padding: 5px 0 20px 0;
+    p {
+        padding: 5px 20px;
+        font-weight: 300;
     }
   }
 
@@ -291,5 +287,112 @@ img.resume {
     font-family: Lato;
     font-weight: 100;
     font-size: 50px;
+    margin-bottom: 0px;
+  }
+
+  button {
+    font-size: 46px;
+  }
+
+  #skills {
+    p {
+      border-top: 1px solid white;
+      margin: 0px;
+      color: #45484B;
+      padding: 20px 20px;
+    }
+  }
+  .hide {
+    display: none;
+  }
+
+  img.resume {
+    width: 85%;
+    margin: 20px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .container {
+    @include outer-container(100%);
+    max-width: 100%;
+    height: 100%;
+
+    .aboutLeft {
+      @include span-columns(6 of 12, block-collapse);
+      height: 100%;
+      background-color: #696758;
+    }
+
+    .aboutRight {
+      @include span-columns(6 of 12, block-collapse);
+      // @include reset-display;
+      overflow: auto;
+      height: 100%;
+      color: #45484B;
+    }
+
+    .skillsLeft {
+      @include span-columns(6 of 12, block-collapse);
+      height: 100%;
+      color: #45484B;
+    }
+
+    .skillsRight {
+      @include span-columns(6 of 12, block-collapse);
+      // @include reset-display;
+      background-color: #45484B;
+      overflow: auto;
+      height: 100%;
+    }
+
+    .portfolioLeft {
+      @include span-columns(6 of 12, block-collapse);
+      height: 100%;
+      background-color: #BCBDAC;
+    }
+
+    .portfolioRight {
+      @include span-columns(6 of 12, block-collapse);
+      // @include reset-display;
+      overflow: auto;
+      height: 100%;
+    }
+
+    .resumeLeft {
+      @include span-columns(6 of 12, block-collapse);
+      height: 100%;
+      color: #45484B;
+    }
+
+    .resumeRight {
+      @include span-columns(6 of 12, block-collapse);
+      // @include reset-display;
+      overflow: auto;
+      height: 100%;
+      text-align: center;
+      background-color: #696758;
+    }
+  }
+
+  .row {
+    .portfolio_description {
+      @include span-columns(3 of 6);
+    }
+
+    .portfolio_img img {
+      @include span-columns(3 of 6);
+    }
+  }
+
+  .button {
+    @include span-columns(12 of 12, block-collapse);
+    text-align: center;
+    margin-top: -20%;
+  }
+
+  button#dropDownSkills, button#dropDownResume {
+    background-color: white;
+    color: #45484B;
   }
 }

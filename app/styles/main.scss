@@ -167,6 +167,8 @@ button.arrow {
 .row {
   text-align: center;
   height: 300px;
+  margin: 20px 40px;
+  border-bottom: 1px solid #BCBDAC;
   .portfolio_description {
     padding-left: 10px;
     font-family: Lato;
@@ -181,7 +183,8 @@ button.arrow {
 
   .portfolio_img img {
     border-radius: 8px;
-    max-width: 380px;
+    width: 280px;
+    height: 270px;
     margin: 10px;
   }
 }

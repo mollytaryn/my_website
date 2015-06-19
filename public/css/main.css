@@ -129,6 +129,8 @@ button.arrow {
   margin: 20px 40px;
   border-bottom: 1px solid #BCBDAC; }
   .row .portfolio_description {
+    text-align: left;
+    margin-left: 15px;
     padding-left: 10px;
     font-family: Lato;
     font-size: 17px;
@@ -182,8 +184,16 @@ img.resume {
       color: white; }
     .container .portfolioRight {
       background-color: white;
-      overflow: none;
-      height: auto; }
+      overflow: auto;
+      height: 100%; }
+      .container .portfolioRight .portfolio_img img {
+        max-width: 70px;
+        max-height: 65px;
+        float: left;
+        margin: 0px 25px 10px 10px; }
+      .container .portfolioRight .portfolio_description {
+        width: 100%;
+        text-align: left; }
     .container .resumeLeft {
       height: 60px;
       background-color: #696758;
